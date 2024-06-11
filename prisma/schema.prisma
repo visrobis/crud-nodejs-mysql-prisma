@@ -13,10 +13,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model users {
+model product {
   id Int @id @default(autoincrement())
-  firstName String
-  lastName String
+  productName String
+  image String
+  stock Int
+  price Int
+  favorites Boolean
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
